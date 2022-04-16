@@ -16,7 +16,7 @@ function handleSubmit(e) {
 }
 
 function searchRepos() {
-  fetch(`https://api.github.com/search/repositories?q=${query}&sort=stars&order=desc&page=1&per_page=100`)
+  fetch(`https://api.github.com/search/repositories?q=${query}`)
   .then(res => res.json())
   .then(data => { setposts(data.items);
 })
